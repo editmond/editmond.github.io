@@ -1,0 +1,52 @@
+html {
+  /* font config */
+  font-size: 1em; 
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  /* background-color: #E9E2C6; */
+  background-color: #C2E9E7;
+}
+
+body{
+  /* width: 800px; */
+  width: 65vw;
+  min-width: 200px;
+  margin: 0px auto;
+  background-color: #E9E2C6;
+  /* background-color: #C2E9E7; */
+  /* background-color: #3B9C9B; */
+  padding: 40px 40px 40px 40px;
+  border: 5px solid black;
+  color: #313B3C;
+}
+
+h1 {
+  /* font styling */
+  font-size: 8em;
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
+  /* box styling */
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  color: #313B3C;
+  /* text-shadow: 3px 3px 1px black; */
+}
+
+p,
+li {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+}
