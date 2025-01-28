@@ -35,7 +35,7 @@ h1 {
   text-align: center;
   margin: 0;
   padding: 10px 0;
-  color: #313B3C;
+  /* color: #313B3C; */
   /* text-shadow: 3px 3px 1px black; */
 }
 
@@ -43,6 +43,11 @@ p,
 li {
   font-size: 1em;
   line-height: 1.5;
+}
+
+a {
+  color: #3B9C9B;
+  font-weight: 600;
 }
 
 img{
