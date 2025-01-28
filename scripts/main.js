@@ -9,7 +9,7 @@ if (hour < 5){
 if (15 < hour && hour < 18){
   greeting = "Good afternoon!";
 }
-if (18 < hour){
+if (18 <= hour){
   greeting = "Good evening!";
 }
 myHeading.textContent = greeting;
