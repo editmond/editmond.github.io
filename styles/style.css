@@ -25,7 +25,8 @@ body{
 
 h1 {
   /* font styling */
-  font-size: 7em;
+  /* font-size: 7em; */
+  font-size: clamp(2em, 50vw, 7em);
   font-family: "Caveat", serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -33,8 +34,11 @@ h1 {
 
   /* box styling */
   text-align: center;
+  /* display: block; */
+  /* margin: 0 auto; */
   margin: 0;
-  padding: 10px 0;
+  /* max-height: 50%; */
+  /* padding: 10px 0; */
   /* color: #313B3C; */
   /* text-shadow: 3px 3px 1px black; */
 }
