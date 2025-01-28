@@ -6,7 +6,7 @@ let hour = now.getHours();
 if (hour < 5){
   greeting = "Go to sleep!";
 }
-if (15 < hour && hour < 18){
+if (15 <= hour && hour < 18){
   greeting = "Good afternoon!";
 }
 if (18 <= hour){
