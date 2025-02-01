@@ -2,14 +2,16 @@
 const myHeading = document.querySelector("h1");
 let greeting = "G'day!";
 let now = new Date();
-let hour = now.getHours();
-if (hour < 5){
+let hours = now.getHours();
+// let minutes = now.getMinutes();
+// let seconds = now.getSeconds();
+if (hours < 5){
   greeting = "Go to sleep!";
 }
-if (15 <= hour && hour < 18){
+if (15 <= hours && hours < 18){
   greeting = "Good afternoon!";
 }
-if (18 <= hour){
+if (18 <= hours){
   greeting = "Good evening!";
 }
 myHeading.textContent = greeting;
@@ -26,4 +28,13 @@ pfpImage.addEventListener("click", () => {
   }
 });
 
-  
+let counts = setInterval(currentTime, 10);
+
+function currentTime(){
+  let myCounter = document.getElementById("clock");
+  now = new Date();
+  hours = now.getHours();
+  minutes = now.getMinutes();
+  seconds = now.getSeconds();
+  myCounter.innerHTML = `${hours}:${minutes}:${seconds}`;
+}

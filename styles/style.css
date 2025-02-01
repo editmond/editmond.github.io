@@ -59,3 +59,9 @@ img{
   margin: 0 auto;
   max-width: 50%;
 }
+
+#clock{
+  position: fixed;
+  left: 250px;
+  top: 50px;
+}
