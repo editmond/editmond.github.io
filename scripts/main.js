@@ -35,5 +35,9 @@ function currentTime(){
   hours = now.getHours();
   minutes = now.getMinutes();
   seconds = now.getSeconds();
-  myCounter.innerHTML = `${hours}:${minutes}:${seconds}`;
+  zero = "";
+  if (seconds < 10){
+    zero = "0";
+  }
+  myCounter.innerHTML = `${hours}:${minutes}:${zero}${seconds}`;
 }
