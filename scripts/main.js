@@ -29,7 +29,6 @@ pfpImage.addEventListener("click", () => {
 });
 
 let counts = setInterval(currentTime, 10);
-
 function currentTime(){
   let myCounter = document.getElementById("clock");
   now = new Date();

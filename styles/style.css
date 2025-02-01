@@ -10,17 +10,25 @@ html {
   background-color: #C2E9E7;
 }
 
+body,
+.beigeBox{
+  background-color: #E9E2C6;
+  padding: 40px 40px 40px 40px;
+  border: 5px solid black;
+  color: #313B3C;
+}
+
 body{
   /* width: 800px; */
   width: 65vw;
   min-width: 200px;
   margin: 0px auto;
-  background-color: #E9E2C6;
-  /* background-color: #C2E9E7; */
-  /* background-color: #3B9C9B; */
-  padding: 40px 40px 40px 40px;
-  border: 5px solid black;
-  color: #313B3C;
+  /* background-color: #E9E2C6; */
+  /* /* background-color: #C2E9E7; */ */
+  /* /* background-color: #3B9C9B; */ */
+  /* padding: 40px 40px 40px 40px; */
+  /* border: 5px solid black; */
+  /* color: #313B3C; */
 }
 
 h1 {
@@ -62,6 +70,6 @@ img{
 
 #clock{
   position: fixed;
-  left: 250px;
-  top: 50px;
+  left: 20px;
+  top: 20px;
 }
