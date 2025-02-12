@@ -50,3 +50,10 @@ function currentTime(){
   myCounter.innerHTML = `${hourZero}${hours}:${minuteZero}${minutes}:${secondZero}${seconds}`;
 }
 
+function showFootnote(footnoteObject, footnoteText){
+  footnoteObject.innerHTML = footnoteText;
+}
+
+function hideFootnote(footnoteObject, footnoteMarker){
+  footnoteObject.innerHTML = footnoteMarker;
+}
