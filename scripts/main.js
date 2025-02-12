@@ -35,9 +35,18 @@ function currentTime(){
   hours = now.getHours();
   minutes = now.getMinutes();
   seconds = now.getSeconds();
-  zero = "";
-  if (seconds < 10){
-    zero = "0";
+  hourZero = "";
+  minuteZero = "";
+  secondZero = "";
+  if (hours < 10){
+    hourZero = "0";
   }
-  myCounter.innerHTML = `${hours}:${minutes}:${zero}${seconds}`;
+  if (minutes < 10){
+    minuteZero = "0";
+  }
+  if (seconds < 10){
+    secondZero = "0";
+  }
+  myCounter.innerHTML = `${hourZero}${hours}:${minuteZero}${minutes}:${secondZero}${seconds}`;
 }
+

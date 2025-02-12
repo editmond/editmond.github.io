@@ -4,11 +4,18 @@ function currentTime(){
   now = new Date();
   hours = now.getHours();
   minutes = now.getMinutes();
-  // seconds = now.getSeconds();
-  seconds = 2;
-  zero = "";
-  if (seconds < 10){
-    zero = "0";
+  seconds = now.getSeconds();
+  hourZero = "";
+  minuteZero = "";
+  secondZero = "";
+  if (hours < 10){
+    hourZero = "0";
   }
-  myCounter.innerHTML = `${hours}:${minutes}:${zero}${seconds}`;
+  if (minutes < 10){
+    minuteZero = "0";
+  }
+  if (seconds < 10){
+    secondZero = "0";
+  }
+  myCounter.innerHTML = `${hourZero}${hours}:${minuteZero}${minutes}:${secondZero}${seconds}`;
 }
