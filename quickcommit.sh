@@ -1,4 +1,4 @@
 #!/bin/zsh
-git add .
+git add *
 git commit
 git push
