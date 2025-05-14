@@ -63,8 +63,13 @@ a {
   color: #3B9C9B;
   font-weight: 600;
 }
-
 img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+#logo{
   display: block;
   margin: 0 auto;
   max-width: 50%;
