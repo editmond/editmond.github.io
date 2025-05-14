@@ -19,3 +19,4 @@ Gemfile.lock
 
 #ignore apple stuff
 .DS_Store/
+.DS_Store
