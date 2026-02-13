@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Edmond Cheng",
+  "license": "ISC"
+}
