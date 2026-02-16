@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend for personal website",
-  "main": "app.js",
+  "main": "app.ts",
   "scripts": {
     "test": "test",
-    "start": "tsx app.js"
+    "start": "tsx app.ts"
   },
   "author": "Edmond Cheng",
   "license": "ISC",
