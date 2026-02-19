@@ -14,9 +14,9 @@ app.use(express.static(frontDir));
 //   res.sendFile(frontDir + '/index.html'); 
 // })
 
-app.get('/fibonnaci/:nth', (req, res) => {
+app.get('/fibonacci/:nth', (req, res) => {
   const nth = parseInt(req.params.nth);
-  res.send(fibonacci(nth))
+  res.send(fibonacci(nth).toString())
 });
 
 app.listen(port, () => {

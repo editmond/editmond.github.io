@@ -1,7 +1,7 @@
-function fibonacci(nth: number): number {
+function fibonacci(nth: bigint): bigint {
   let a = 0n;
   let b = 1n;
-  let res = 0;
+  let res = 0n;
   for (let i = 1; i < nth; i++) {
     res = a + b;
     a = b;
