@@ -3,11 +3,23 @@ import config from './config.json';
 import path from 'path'
 
 import { fibonacci } from './some_functions'
+import https from 'https'
+import fs from 'fs'
+
+const options = {
+  key: fs.readFileSync('private-key.pem'),
+  cert: fs.readFileSync('certificate.pem'),
+};
 
 const app = express();
 const port = config.port;
 const frontDir = path.resolve(__dirname + "/../frontend");
 app.use(express.static(frontDir));
+
+https.createServer(options, (req, res) => {
+  res.writeHead(200);
+  res.end('hello world\n');
+}).listen(config.port);
 
 // respond with "hello world" when a GET request is made to the homepage
 // app.get('/', (req, res) => {
