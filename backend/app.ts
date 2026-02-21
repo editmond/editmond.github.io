@@ -2,9 +2,11 @@ import express from 'express';
 import config from './config.json';
 import path from 'path'
 
-import { fibonacci } from './some_functions'
+import http from 'http'
 import https from 'https'
 import fs from 'fs'
+
+import { fibonacci } from './some_functions'
 
 const options = {
   key: fs.readFileSync('./ssl_cert/private.key.pem'),
@@ -20,6 +22,8 @@ https.createServer(options, (req, res) => {
   res.writeHead(200);
   res.end('hello world\n');
 }).listen(config.port);
+http.createServer(app);
+
 
 // respond with "hello world" when a GET request is made to the homepage
 // app.get('/', (req, res) => {
