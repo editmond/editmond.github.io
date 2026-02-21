@@ -7,8 +7,8 @@ import https from 'https'
 import fs from 'fs'
 
 const options = {
-  key: fs.readFileSync('private-key.pem'),
-  cert: fs.readFileSync('certificate.pem'),
+  key: fs.readFileSync('./ssl_cert/private.key.pem'),
+  cert: fs.readFileSync('./ssl_cert/domain.cert.pem'),
 };
 
 const app = express();
