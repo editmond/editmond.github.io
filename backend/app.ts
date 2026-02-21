@@ -21,8 +21,8 @@ app.use(express.static(frontDir));
 https.createServer(options, (req, res) => {
   res.writeHead(200);
   res.end('hello world\n');
-}).listen(config.port);
-http.createServer(app);
+}).listen(parseInt(config.port)+443);
+http.createServer(app).listen(config.port);
 
 
 // respond with "hello world" when a GET request is made to the homepage
