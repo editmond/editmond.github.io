@@ -9,8 +9,8 @@ import fs from 'fs'
 import { fibonacci } from './some_functions'
 
 const options = {
-  key: fs.readFileSync('./ssl_cert/private.key.pem'),
-  cert: fs.readFileSync('./ssl_cert/domain.cert.pem'),
+  key: fs.readFileSync('./ssl_cert/privkey.pem'),
+  cert: fs.readFileSync('./ssl_cert/fullchain.pem'),
 };
 
 const app = express();
