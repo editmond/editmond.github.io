@@ -2,12 +2,25 @@ import express from 'express';
 import config from './config.json';
 import path from 'path'
 
+import http from 'http'
+import https from 'https'
+import fs from 'fs'
+
 import { fibonacci } from './some_functions'
+
+const options = {
+  key: fs.readFileSync('./ssl_cert/privkey.pem'),
+  cert: fs.readFileSync('./ssl_cert/fullchain.pem'),
+};
 
 const app = express();
 const port = config.port;
 const frontDir = path.resolve(__dirname + "/../frontend");
 app.use(express.static(frontDir));
+
+https.createServer(options, app).listen(parseInt(config.port)+443);
+http.createServer(app).listen(config.port);
+
 
 // respond with "hello world" when a GET request is made to the homepage
 // app.get('/', (req, res) => {
@@ -20,5 +33,9 @@ app.get('/fibonacci/:nth', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`HTTP app listening on port ${port}`);
+})
+
+app.listen(parseInt(port)+443, () => {
+  console.log(`HTTPS app listening on port ${parseInt(port)+443}`);
 })
