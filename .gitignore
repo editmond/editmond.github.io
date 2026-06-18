@@ -17,6 +17,12 @@ _site/
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
 
+# Basic server ignores.
+*.json
+!package.json
+node_modules
+*.pem
+
 #ignore apple stuff
 .DS_Store/
 .DS_Store
