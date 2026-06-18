@@ -1,3 +1,3 @@
 # editmond.github.io
 My website!
-You can go to [editmond.github.io](editmond.github.io) or [editmond.fyi](editmond.fyi) to check it out.
+You can go to [editmond.github.io](https://editmond.github.io) or [editmond.fyi](https://editmond.fyi) to check it out.
