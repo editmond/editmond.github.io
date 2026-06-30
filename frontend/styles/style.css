@@ -31,6 +31,7 @@ body{
   padding: 40px 40px 40px 40px;
   border: 5px solid black;
   color: #313B3C;
+  overflow-wrap: break-word;
 }
 
 h1 {

@@ -15,10 +15,10 @@ const options = {
 
 const app = express();
 const port = config.port;
-const frontDir = path.resolve(__dirname + "/../frontend");
+const frontDir = path.resolve(__dirname + "/frontend");
 app.use(express.static(frontDir));
 
-https.createServer(options, app).listen(parseInt(config.port)+443);
+// https.createServer(options, app).listen(parseInt(config.port)+443);
 http.createServer(app).listen(config.port);
 
 
@@ -28,13 +28,24 @@ http.createServer(app).listen(config.port);
 // })
 
 app.get('/fibonacci', (req, res) => {
-  const rand = Math.round(Math.random() * 100)
-  res.send(fibonacci(rand).toString())
+  let multiplier = 100;
+  let increaseChance = 1;
+  while (Math.random() < increaseChance) {
+    multiplier *= 10;
+    increaseChance -= Math.random();
+  }
+  const rand = Math.random() * multiplier;
+  res.send({"num": fibonacci(rand).toString()})
+  // res.sendFile(__dirname + "/index.html")
+  // res.redirect('/subpages/fun/fibonacci.html')
 });
 
 app.get('/fibonacci/:nth', (req, res) => {
   const nth = parseInt(req.params.nth);
-  res.send(fibonacci(nth).toString())
+  if (!nth && nth != 0) {
+    res.status(400).send(`Received ${nth} which is not an integer`)
+  }
+  res.status(200).send({"num": fibonacci(nth).toString()})
 });
 
 app.listen(port, () => {
