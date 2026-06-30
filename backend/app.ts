@@ -27,6 +27,11 @@ http.createServer(app).listen(config.port);
 //   res.sendFile(frontDir + '/index.html'); 
 // })
 
+app.get('/fibonacci', (req, res) => {
+  const rand = Math.round(Math.random() * 100)
+  res.send(fibonacci(rand).toString())
+});
+
 app.get('/fibonacci/:nth', (req, res) => {
   const nth = parseInt(req.params.nth);
   res.send(fibonacci(nth).toString())
